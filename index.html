@@ -5,28 +5,30 @@
     <script src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'></script>
     <script type='text/javascript'>
       window.onload = function() {
-        Formio.createForm(document.getElementById('formio'){
-          components": [
-        {
-            "label": "Họ tên BN",
-            "key": "hoTenBn",
-            "type": "textfield",
-            "input": true
-        },
-        {
-            "label": "Địa chỉ",
-            "key": "diaChi",
-            "type": "textfield",
-            "input": true
-        },
-        {
-            "type": "button",
-            "label": "Submit",
-            "key": "submit",
-            "disableOnInvalid": true,
-            "input": true
-        }
-    ]});
+        Formio.createForm(document.getElementById('formio'), {
+          components: [
+            {
+              type: 'textfield',
+              key: 'firstName',
+              label: 'First Name',
+              placeholder: 'Enter your first name.',
+              input: true
+            },
+            {
+              type: 'textfield',
+              key: 'lastName',
+              label: 'Last Name',
+              placeholder: 'Enter your last name',
+              input: true
+            },
+            {
+              type: 'button',
+              action: 'submit',
+              label: 'Submit',
+              theme: 'primary'
+            }
+          ]
+        });
       };
     </script>
   </head>
